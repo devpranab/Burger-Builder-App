@@ -6,7 +6,9 @@ const Main = () => {
     return (
         <div>
             <Header/>
+       <div className='container'>
             <BurgerBuilder/>
+         </div>
         </div>
     );
 };
