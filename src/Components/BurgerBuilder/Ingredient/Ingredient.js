@@ -6,7 +6,7 @@ import Meat from "../../../assets/images/meat.png";
 import Salad from "../../../assets/images/salad.png";
 import Cheese from "../../../assets/images/cheese.png";
 
-const Ingredient = (props) => {
+const Ingredient = props => {
     let ingredient = null;
 
     switch (props.type) {
