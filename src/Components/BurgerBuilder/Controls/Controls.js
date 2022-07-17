@@ -14,8 +14,8 @@ const BuildControl = props => {
             fontSize: "1.2rem",
             fontWeight: "bold",
            }}>{props.label}</div>
-           <Button className='btn btn-danger btn-sm m-1'>Less</Button>
-           <Button className='btn btn-success btn-sm m-1'>More</Button>
+           <Button className='btn btn-danger btn-sm m-1' onClick={props.removed}>Less</Button>
+           <Button className='btn btn-success btn-sm m-1' onClick={props.added}>More</Button>
         </div>
     )
 }
@@ -41,6 +41,8 @@ const Controls = props => {
                         label={item.label}
                         type={item.type}
                         key={Math.random()}
+                        added={() => props.ingredientAdded(item.type)}
+                        removed={() => props.ingredientRemoved(item.type)}
                         />
                     })
                  }
