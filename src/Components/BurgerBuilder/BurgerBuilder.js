@@ -60,6 +60,14 @@ updatePurchasable = ingredients => {
             modalOpen : !this.state.modalOpen
         })
     }
+
+    handleCheckout = () => {
+        this.props.history.push('/checkout');
+    }
+    componentDidMount(){
+       console.log(this.props);
+    }
+
     render(){
         return (
             <div>
@@ -80,7 +88,7 @@ updatePurchasable = ingredients => {
                     <Summery ingredients={this.state.ingredients}/>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="sucess" onClick={this.toggleModal}>Continue to checkout</Button>
+                    <Button color="sucess" onClick={this.handleCheckout}>Continue to checkout</Button>
                     <Button color="secondary" onClick={this.toggleModal}>Cancel</Button>
                 </ModalFooter>
             </Modal>
